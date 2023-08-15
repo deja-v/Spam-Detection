@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Input App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+      padding-top: 10rem;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .input-box {
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 95%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    textarea {  
+   font-family: Arial, sans-serif;     
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spam Classifier</h1>
+    <form action="{{ url_for('predict')}}" method="POST">
+    <div class="input-box">
+      <!-- <input type="text" name="a" id="textInput" placeholder="Enter some text"> -->
+      <textarea rows="5" cols="56" id="textInput" name="a"  ></textarea>
+    </div>
+    <input type="submit" class="btn" value="Find out">
+    
+    </form>
+    <p class="result" id="resultText">{{prediction_text}}</p>
+  </div>
+
+  
+</body>
+</html>

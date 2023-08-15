@@ -1,0 +1,16 @@
+1. Data cleaning
+2. EDA
+3. Text Preprocessing:- vectorization
+4. Model Building
+5. Evaluation
+6. Improvement
+7. Website
+8. Deploy
+
+
+Data preprocessing:
+1. lower case
+2. Tokenization
+3. Removing special characters
+4. Removing stop words and punctuation
+5. stemming
